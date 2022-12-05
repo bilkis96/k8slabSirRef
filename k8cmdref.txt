@@ -1,0 +1,27 @@
+#run pods in k8s
+kubectl run podnginx --image nginx
+kubectl run 2ndpodnginx --image nginx
+kubectl run 3rdpod --image busybox
+kubectl run 5thpod --image busybox "/bin/sh" -- "sleep 600"
+
+kubectl get pods
+kubectl describe pod 5thpod
+kubectl get pods -o wide
+kubectl delete pods 3rdpod
+
+install extenstions:
+kubernetes (microsoft), kubernetes support
+
+kubectl create -f pod2.yml
+kubectl create -f pod1.yml
+
+
+kubectl describe pod nginx-pod
+
+
+##replica set
+create rc yaml - 3replicaset.yml
+
+kubectl apply -f 3replicaset.yml
+
+
