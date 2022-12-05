@@ -20,3 +20,8 @@ sudo mv ./kind /usr/local/bin/kind
 
 #create k8s cluster
 kind create  cluster
+#downlaods required image from kindest/node registry
+
+kubectl cluster-info
+kubectl get nodes
+kubernets installed and ready!!!
