@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  nginxservice
+spec:
+  selector:
+    app:  nginx
+  type:  NodePort
+  ports:
+  - port:  80
+    targetPort:  80
+    nodePort: 30010
+
+# deploy the pods 1st
+# kubectl create -f 5deploynginxplain.yml
+# adding service
+    # kubectl apply -f 5service.yml
+    # kubectl get service nginxservice
+    # kubectl get nodes -o wide (note internal ip)
+    # curl/firefox  http://nodeip:nodepport 
