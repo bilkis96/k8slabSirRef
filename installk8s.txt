@@ -25,3 +25,7 @@ kind create  cluster
 kubectl cluster-info
 kubectl get nodes
 kubernets installed and ready!!!
+
+kind get clusters
+
+kind create cluster --name myk8s --config=kindk8scluster.yaml
