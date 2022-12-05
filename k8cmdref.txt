@@ -24,4 +24,14 @@ create rc yaml - 3replicaset.yml
 
 kubectl apply -f 3replicaset.yml
 
+kubectl scale rc nginxreplica --replicas=5
+kubectl scale rc nginxreplica --replicas=1
 
+kubectl apply -f 4deploy.yml
+
+kubectl get deploy
+kubectl get rs 
+kubectl get pods
+
+kubectl delete rc nginxreplica
+kubectl delete -f 4deploy.yml
